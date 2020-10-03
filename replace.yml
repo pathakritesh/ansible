@@ -1,0 +1,7 @@
+- hosts: webservers
+  tasks:
+  - name: Replace example
+    replace:
+     path: /home/ansible/niranj.txt
+     regexp: 'hello'
+     replace: "world"
