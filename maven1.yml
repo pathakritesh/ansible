@@ -1,0 +1,25 @@
+--- 
+- 
+  become: true
+  hosts: webservers
+  tasks: 
+    - 
+      get_url: "url=http://www-us.apache.org/dist/maven/maven-3/3.5.3/binaries/apache-maven-3.5.3-bin.tar.gz dest=/opt/niranjan/apache-maven-3.5.3-bin.tar.gz"
+      name: "Download Maven"
+    - 
+      command: "tar xvf /opt/niranjan/apache-maven-3.5.3-bin.tar.gz -C /opt/niranjan"
+      name: "Extract Maven"
+    - 
+      command: "mv /opt/niranjan/apache-maven-3.5.3 /opt/niranjan/maven"
+      name: "Move to a smaller directory"
+    - 
+      copy: "content=\"export M2_HOME=/opt/niranjan/maven \\n\" dest=/etc/profile.d/maven.sh"
+      name: "Update Profile"
+    - 
+      lineinfile: 
+        line: "export PATH=${M2_HOME}/bin:${PATH}"
+        path: /etc/profile.d/maven.sh
+    - 
+      name: "Source profile"
+      shell: "source /etc/profile.d/maven.sh"
+
