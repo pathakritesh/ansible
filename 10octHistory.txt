@@ -1,0 +1,781 @@
+    1  passwd Cc53051
+    2  sudo bash
+    3  clear
+    4  exit
+    5  cd /etc/ssh
+    6  vi sshd_config
+    7  exit
+    8  su - ansible
+    9  exit
+   10  clear
+   11  ssh-keygen
+   12  ssh-copy-id -i ansible@34.71.41.202
+   13  cd /etc/ansible
+   14  ls
+   15  cat ansible.cfg
+   16  ansible-doc -l
+   17  cat ansible.cfgsaaa
+   18  ansible-do
+   19  clear
+   20  ansible-doc -l :grep
+   21  OAclear
+   22  claer
+   23  clear
+   24  exit
+   25  ansible-doc -l :grep azure
+   26  OA
+   27  exit
+   28  ansible-doc -l | grep azure
+   29  ansible-doc -l | grep aws
+   30  ansible-doc -l | wc -l
+   31  history
+   32  exit
+   33  ansible -m ping webservers
+   34  cat /etc/ansible/webservers
+   35  cat /etc/ansible/hosts
+   36  clear
+   37  ansible-doc ping
+   38  clear
+   39  ansible -m command -a uptime webservers
+   40  ansible -m command -a 'df -kh'  webservers
+   41  ansible -m command -a 'df -kh /tmp'  webservers
+   42  ansible -m command -a 'free -m'  webservers
+   43  clear
+   44  ansible -m yum -a "name=httpd state=present" webservers
+   45  ansible -m yum -a "name=httpd state=present" webservers --become
+   46  rpm -qa | grep httpd
+   47  ansible -m yum -a "name=httpd state=absent" webservers --become
+   48  clear
+   49  ansible -m yum -a "name=httpd state=present" webservers --become
+   50  ansible -m -a "name=httpd state=started" webservers --become
+   51  ansible -m service -a "name=httpd state=started" webservers --become
+   52  ansible -m service -a "name=httpd state=stop" webservers --become
+   53  ansible -m service -a "name=httpd state=stopped" webservers --become
+   54  ansible -m service -a "name=httpd state=started" webservers --become
+   55  clear
+   56  ansible -m service -a "name=httpd state=stopped" webservers --become
+   57  ansible -m service -a "name=httpd state=started" webservers --become -vvv
+   58  clear
+   59  cd /tmp
+   60  vi ant.txt
+   61  ansible -m copy -a "src=/tmp/ant.txt dest=/tmp/" webservers
+   62  ansible -m command -a "name=git state=present" webservers --become
+   63  ansible -m yum -a "name=git state=present" webservers --become
+   64  ansible-doc git
+   65  ansible -m git -a "repo=https://github.com/pathakritesh/milke_Aperture_Technology.git version=HEAD dest=/temp/git" webservers
+   66  clear
+   67  ansible -m git -a "repo=https://github.com/pathakritesh/milke_Aperture_Technology.git version=HEAD dest=/temp/git" webservers
+   68  ansible -m git -a "repo=https://github.com/pathakritesh/milke_Aperture_Technology.git version=HEAD dest=/temp" webservers
+   69  ansible -m git -a "repo=https://github.com/pathakritesh/milke_Aperture_Technology.git version=HEAD dest=/tmp/git" webservers
+   70  ansible -m shell -a "cat /proc/cpuinfo" webservers
+   71  ansible -m yum -a "name=tomcat state=present" webservers -b -K
+   72  clear
+   73  cd /tmp
+   74  ssh-copy-id -i ansibl@34.69.101.60
+   75  ssh-copy-id -i ansible@34.69.101.60
+   76  clear
+   77  exit
+   78  ssh-copy-id -i ansible@34.69.101.60
+   79  clear
+   80  cd /etc/ansible
+   81  sudo vi hosts
+   82  clear
+   83  ansible -m ping webservers
+   84  ansible -m ping -- limit "4.69.101.60"  webservers
+   85  ansible -m ping --limit "4.69.101.60"  webservers
+   86  ansible -m ping --limit "34.69.101.60"  webservers
+   87  ansible -m user -a "name=kush createhome=yes" webservers --become
+   88  ssh ansible@34.69.101.60
+   89  clear
+   90  ansible -m file -a "path=/tmp/edureka state=directory mode= 0755" webservers --become
+   91  ansible -m file -a "path=/tmp/edureka state=directory mode=0755" webservers --become
+   92  clear
+   93  ansible -m file -a "path=/tmp/edureka state=touch mode=0755" webservers --become
+   94  ansible -m file -a "path=/tmp/edureka1 state=touch mode=0755" webservers --become
+   95  ansible -m file -a "path=/tmp/edureka/ye_hai_aam_zindgi state=touch mode=0755" webservers --become
+   96  history
+   97  ansible -m setup -a "filter=ansible_user*" webservers
+   98  clear
+   99  sudo vi first.yml
+  100  cat first.yml
+  101  ansible-playbook first.yml --syntax -check
+  102  clear
+  103  ansible-playbook --diff --check first.yml
+  104  ansible-playbook first.yml
+  105  cd /home/ansible
+  106  cd /home
+  107  cd /ansible
+  108  ls
+  109  cd ansible
+  110  pwd
+  111  ansible-playbook first.yml
+  112  ls
+  113  ls -lhrt
+  114  ls -lrt
+  115  cd tmp
+  116  cd
+  117  cd /tmp
+  118  ls
+  119  ansible-playbook --diff --check first.yml
+  120  cd
+  121  ls
+  122  cd /home
+  123  ls
+  124  cd ansible
+  125  ls
+  126  cd ..
+  127  cd errit3
+  128  clear
+  129  cd /tmp
+  130  ls
+  131  ls -lhrt
+  132  clear
+  133  ls
+  134  vi first.yml
+  135  clear
+  136  yum install -y vim
+  137  exit
+  138  vim first.yml
+  139  cd /tmp
+  140  vim first.yml
+  141  ansible-playbook --diff --check first.yml
+  142  vim first.yml
+  143  ansible-playbook --diff --check first.yml
+  144  vim first.yml
+  145  ansible-playbook --diff --check first.yml
+  146  ansible-playbook first.yml
+  147  ansible-playbook --limit "34.69.101.60" first.yml
+  148  clear
+  149  df /tmp
+  150  df /tmp --output\=avail | tail -l
+  151  df -kh /tmp --output\=avail | tail -l
+  152  cat first.yml
+  153  cd /tmp
+  154  sudo vim second.yml
+  155  vi kush.txt
+  156  clear
+  157  ansible-playbook second.yml --syntax --check
+  158  sudo vim second.yml
+  159  ansible-playbook second.yml --syntax --check
+  160  ansible-playbook second.yml 
+  161  ls -lhrt
+  162  sudo vim second.yml
+  163  vi kush.txt
+  164  clear
+  165  sudo vim second.yml
+  166  ansible-playbook second.yml 
+  167  ls -lhrt
+  168  vi kush.txt
+  169  sudo vim second.yml
+  170  ansible-playbook second.yml 
+  171  vi kush.txt
+  172  ls -lhrt
+  173  clear
+  174  sudo vim third.yml
+  175  ansible-playbook third.yml --syntax -check
+  176  touch test.sh
+  177  ansible-playbook --diff --check third.yml 
+  178  vi test.sh
+  179  ansible-playbook third.yml -vvv
+  180  cat third.yml
+  181  vi learn.txt
+  182  cd /tmp
+  183  vi learn.txt
+  184  sudo vim learn.yml
+  185  ansible-playbook learn.yml --syntax --check
+  186  sudo vim learn.yml
+  187  ansible-playbook learn.yml --syntax --check
+  188  sudo vim learn.yml
+  189  ansible-playbook learn.yml --syntax --check
+  190  sudo vim learn.yml
+  191  ansible-playbook learn.yml --syntax --check
+  192  ansible-playbook learn.yml
+  193  cat learn.yml
+  194  clear
+  195  cat learn.yml
+  196  sudo vim replace.txt
+  197  sudo vim replace.yml
+  198  ansible-playbook replace.yml --syntax --check
+  199  ansible-playbook --diff --check replace.yml
+  200  sudo vim replace.yml
+  201  ansible-playbook --diff --check replace.yml
+  202  sudo vim replace.yml
+  203  ansible-playbook --diff --check replace.yml
+  204  ansible-playbook replace.yml
+  205  cat replace.yml
+  206  ansible -m command -a uptime webservers
+  207  ansible -m ping webservers
+  208  history
+  209  ssh-copy-id -i ansible@34.69.101.60
+  210  ssh-copy-id -i ansible@35.232.171.185
+  211  ansible -m ping webservers
+  212  vi hosts
+  213  cd /tmp
+  214  vi hosts
+  215  exit
+  216  ansible -m ping webservers
+  217  ansible -m command -a uptime webservers
+  218  cd /tmp
+  219  clear
+  220  sudo vim five.yml
+  221  cd /tmp
+  222  touch index.html
+  223  ansible-playbook five.yml --syntax --check
+  224  cd
+  225  ansible-playbook five.yml --syntax --check
+  226  sudo vim five.yml
+  227  cd /tmp
+  228  sudo vim five.yml
+  229  ansible-playbook five.yml --syntax --check
+  230  sudo vim five.yml
+  231  sudo vim six.yml
+  232  ansible-playbook six.yml --syntax --check
+  233  sudo vim six.yml
+  234  ansible-playbook six.yml --syntax --check
+  235  ansible-playbook --diff --check six.yml
+  236  ansible-playbook six.yml
+  237  cat six.yml
+  238  vi index.html
+  239  ansible-playbook six.yml
+  240  git init
+  241  git remote add origin https://github.com/pathakritesh/html.git
+  242  git pull origin master
+  243  ls
+  244  cd Rit Web Page_files
+  245  cd "Rit Web Page_files"
+  246  ls
+  247  ls -lrt
+  248  clear
+  249  ls -lrt
+  250  cd ..
+  251  git pull origin master
+  252  ls -lhrt
+  253  cd "Rit Web Page_files"
+  254  ls
+  255  cd /ymp
+  256  cd /tmp
+  257  sudo vim six.yml
+  258  ansible-playbook six.yml --syntax --check
+  259  ansible-playbook --diff --check six.yml
+  260  sudo vim six.yml
+  261  ansible-playbook --diff --check six.yml
+  262  sudo vim six.yml
+  263  ansible-playbook six.yml
+  264  sudo vim six.yml
+  265  ansible-playbook --diff --check six.yml
+  266  sudo vim six.yml
+  267  ansible-playbook --diff --check six.yml
+  268  clear
+  269  git pull origin master
+  270  ls -lhrt
+  271  sudo vim six.yml
+  272  ansible-playbook --diff --check six.yml
+  273  sudo vim six.yml
+  274  ansible-playbook --diff --check six.yml
+  275  ansible-playbook six.yml
+  276  clear
+  277  cd /tmp
+  278  cat six.yml
+  279  curl ifconfig
+  280  clear
+  281  cd /tmp
+  282  clear
+  283  cd /tmp
+  284  clear
+  285  curl ifconfig.io
+  286  cat six.yml
+  287  sudo vim seven.yml
+  288  ansible-playbook seven.yml --syntax --check
+  289  ansible-playbook --diff --check seven.yml
+  290  ansible-playbook seven.yml
+  291  ls -lhrt
+  292  cat dest.txt
+  293  more dest.txt
+  294  sudo cat dest.txt
+  295  hostname
+  296  clear
+  297  cat seven.yml
+  298  clear
+  299  ansible-galaxy search jenkins
+  300  ansible-galaxy install geerlingguy.java
+  301  ansible-galaxy install geerlingguy.jenkins
+  302  ansible-galaxy remove geerlingguy.jenkins
+  303  ansible-galaxy remove geerlingguy.java
+  304  clear
+  305  ansible-galaxy info 
+  306  ansible-galaxy install geerlingguy.java
+  307  ansible-galaxy install geerlingguy.jenkins
+  308  ansible-galaxy info geerlingguy.j
+  309  clear
+  310  sudo vim eight.yml
+  311  sudo-playbook eight.yml --syntax --check
+  312  ansible-playbook eight.yml --syntax --check
+  313  ansible-playbook --diff --check eight.yml
+  314  ansible-playbook eight.yml
+  315  ls -lhrt
+  316  clear
+  317  jenkins --versions
+  318  jenkins--versions
+  319  jenkins --versions
+  320  clear
+  321  ansible-jenkins --version
+  322  clear
+  323  history
+  324  clear
+  325  cat eight.yml
+  326  clear
+  327  su - jenkins
+  328  clear
+  329  sudo bash
+  330  ls
+  331  clear
+  332  cd /etc/ansible
+  333  vi hosts
+  334  exit
+  335  ssh-keygen
+  336  ssh-copy-id -i ansible@35.224.229.122
+  337  ssh ansible@35.224.229.122
+  338  ansible-doc -l
+  339  ansible -m ping --limit "35.224.229.122" webservers
+  340  ansible - file -a "path=/tmp/eduproject state=directory mode=0755" webservers --become
+  341  ansible -m file -a "path=/tmp/eduproject state=directory mode=0755" webservers --become
+  342  ssh ansible@35.224.229.122
+  343  ansible -m file -a "path=/tmp/eduproject/test.txt state=directory mode=255" webservers --become
+  344  ssh ansible@35.224.229.122
+  345  clear
+  346  ansible -m setup webservers
+  347  ansible -m setup  -a "filter=ansible_user*" webservers
+  348  clear
+  349  exit
+  350  clear
+  351  ls -lhrt
+  352  catfive.yml
+  353  ls
+  354  cat five.yml
+  355  clear
+  356  ls
+  357  cd /etc/tmp
+  358  clear
+  359  ls
+  360  clear
+  361  cd /home
+  362  ls
+  363  cd ansible
+  364  ls
+  365  cd /tmp
+  366  ls
+  367  pwd
+  368  cat first.yml
+  369  ansible-playbook first.yml --syntax --check
+  370  vi docker.yml
+  371  ansible-playbook docker.yml --syntax --check
+  372  ansible-playbook --diff --check docker.yml
+  373  docker-playbook docker.yml
+  374  ansible-playbook docker.yml
+  375  clear
+  376  cd /tmp
+  377  ls
+  378  cat learn.yml
+  379  cat seven.yml
+  380  cat six.yml
+  381  cat five.yml
+  382  cat four.yml
+  383  cat three.yml
+  384  cat two.yml
+  385  cat first.yml
+  386  vi jentest.yml
+  387  ansible-playbook --syntax --check jentest.yml
+  388  vi jentest.yml
+  389  clear
+  390  docker images
+  391  service docker status
+  392  exit
+  393  su - jenkins
+  394  exit
+  395  ls
+  396  exit
+  397  su - jenkins
+  398  su exit
+  399  su - jenkins
+  400  exit
+  401  su - jenkins
+  402  ansible-playbook --diff --check rep.yml
+  403  cd /tmp
+  404  ansible-playbook --diff --check rep.yml
+  405  ansible-playbook rep.yml
+  406  cat learn.txt
+  407  clear
+  408  cd
+  409  cd /var/lib/jenkins/workspace/ansible
+  410  ls
+  411  cd /opt/playbooks
+  412  ls
+  413  cd /var/lib/jenkins/workspace/ansible
+  414  cat rep.yml
+  415  cd /opt/playbooks
+  416  cd
+  417  cp /var/lib/jenkins/workspace/ansible/rep.yml /opt/playbooks
+  418  exit
+  419  cd /opt/playbooks
+  420  ansible-playbook --diff --check copywarfile.yml
+  421  ansible-playbook --diff --check copywarfile.yml -vvv
+  422  cat copywarfile.yml
+  423  vi  copywarfile.yml
+  424  exit
+  425  ansible-playbook --diff --check copywarfile.yml -vvv
+  426  ls
+  427  cd /opt/playbooks
+  428  ansible-playbook --diff --check copywarfile.yml -vvv
+  429  su - jenkins
+  430  exit
+  431  cd /opt/playbooks
+  432  ansible-playbook --diff --check dockercont.yml
+  433  ansible-playbook dockercont.yml
+  434  cd
+  435  cd /opt/playbook
+  436  cd /opt/playbooks
+  437  ansible-playbook --diff --check dockercont.yml
+  438  cd /opt/playbooks
+  439  ansible-playbook --diff --check dockercont.yml
+  440  cat dockercont.yml
+  441  ansible-playbook --diff --check rep.yml
+  442  ls
+  443  ansible-playbook --diff --check copywarfile.yml
+  444  cat copywarfile.yml
+  445  clear
+  446  cat rep.yml
+  447  sudo vim update.yml
+  448  cat update.yml
+  449  cd /tmp
+  450  ansible-playbook --diff --check php.yml
+  451  cat php.yml
+  452  ansible-playbook --diff --check php.yml
+  453  ansible-playbook php.yml
+  454  ansible-playbook --diff --check php.yml
+  455  sudo vim php.yml
+  456  ansible-playbook --diff --check php.yml
+  457  pwd
+  458  cd /tmp
+  459  cat six.yml
+  460  ansible-playbook --diff --check six.yml
+  461  ansible-playbook six.yml
+  462  vi new.html
+  463  sudo vi new.html
+  464  ansible-playbook six.yml
+  465  clear
+  466  cd /tmp
+  467  ls
+  468  ansible-playbook six.yml --syntax --check
+  469  clear
+  470  ls -alrt
+  471  clear
+  472  exit
+  473  cd /tmp
+  474  sudo vi anu.yml
+  475  ansible-playbook --syntax --check anu.yml
+  476  sudo vi anu.yml
+  477  cat rep.yml
+  478  cat anu.yml
+  479  sudo vi anu.yml
+  480  ansible-playbook --syntax --check anu.yml
+  481  cat anu
+  482  cat anu.yml
+  483  service ansible staus
+  484  service ansible status
+  485  systemctl ansible status
+  486  systemctl status ansible
+  487  cd /tmp
+  488  ls
+  489  ansible --syntax --check six.yml
+  490  ansible-playbook --syntax --check six.yml
+  491  ansible hosts
+  492  ansible webservers
+  493  ansible -m ping webservers
+  494  ansible -m setup webservers
+  495  ansible -m setup -o "filter= ansible_user*" webservers
+  496  ansible -m setup -o "filter= ansible_user*" webserver
+  497  ansible -m setup -o "filter= ansible_user*" webservers
+  498  clear
+  499  ls
+  500  cd
+  501  pwd
+  502  exit
+  503  history
+  504  ansible -m ping webservers
+  505  clear
+  506  ls
+  507  pwd
+  508  exit
+  509  whoami
+  510  sudo bash
+  511  ansible -m ping webservers
+  512  cd /etc/ansible
+  513  vi hosts
+  514  exit
+  515  ansible -m ping webservers
+  516  cd /tmp
+  517  ls
+  518  cd
+  519  ls
+  520  cd /home
+  521  ls
+  522  cd ansible
+  523  ls
+  524  pwd
+  525  ls
+  526  cd 
+  527  ls
+  528  pwd
+  529  cd 
+  530  ls
+  531  pwd
+  532  cd /tmp
+  533  l
+  534  ls
+  535  cd
+  536  clear
+  537  ls
+  538  cd /home
+  539  ls
+  540  cd jenkins
+  541  ls
+  542  cd errit3
+  543  cd ..
+  544  cd errit3
+  545  sudo cd errit3
+  546  pwd
+  547  cd
+  548  pwd
+  549  cd /etc/tmp
+  550  cd /etc
+  551  ls
+  552  cd
+  553  ansible -m ping webservers
+  554  cd
+  555  ls
+  556  vi hosts
+  557  sudo bash
+  558  ansible -m ping webservers
+  559  ls
+  560  vi example.yml
+  561  ansible-playbook --check --syntax example.yml
+  562  ansible-playbook --diff example.yml -vvv
+  563  ansible -m ping webservers
+  564  ansible-playbook --diff example.yml -vvv
+  565  ansible-playbook --diff example.yml
+  566  cat five.yml
+  567  cat example.yml
+  568  vi example.yml
+  569  ansible-playbook --diff example.yml -vvv
+  570  ansible-playbook --diff example.yml
+  571  vi example.yml
+  572  ansible-playbook --diff example.yml
+  573  vi example.yml
+  574  ansible-playbook --diff example.yml
+  575  vi example.yml
+  576  ansible-playbook --diff example.yml
+  577  ansible-playbook --diff example.yml -vvv
+  578  vi example.yml
+  579  ansible-playbook --diff example.yml -vvv
+  580  ansible-playbook example.yml
+  581  ansible playbook --check --syntax mkdir.yml
+  582  cd ansible
+  583  cd
+  584  l
+  585  ls
+  586  ansible-playbook --check --syntax mkdir.yml
+  587  ansible-playbook --diff mkdir.yml -vvv
+  588  ansible-playbook --diff mkdir.yml
+  589  vi mkdir.yml
+  590  ansible-playbook --diff mkdir.yml
+  591  ansible-playbook mkdir.yml -vvv
+  592  vi mkdir1.yml
+  593  ansible-playbook --diff mkdir1.yml
+  594  ansible-playbook mkdir1.yml -vvv
+  595  vi multidir.yml
+  596  ansible-playbook --diff multidir.yml
+  597  vi multidir.yml
+  598  ansible-playbook --check --syntax multidir.yml
+  599  vi multidir.yml
+  600  ansible-playbook --check --syntax multidir.yml
+  601  ls
+  602  rm multidir.yml
+  603  ls
+  604  vi create_user.yml
+  605  ansible-playbook --check --syntax create_user.yml
+  606  ansible-playbook --diff create_user.yml
+  607  ansible-playbook create_user.yml
+  608  vi remove_user.yml
+  609  cat create_user.yml
+  610  ansible-playbook --check --syntax remove_user.yml
+  611  la
+  612  ls
+  613  vi remove_user.yml
+  614  ansible-playbook --check --syntax remove_user.yml
+  615  ansible-playbook --diff remove_user.yml
+  616  ansible-playbook remove_user.yml
+  617  pwd
+  618  ls
+  619  git init
+  620  git status
+  621  ls
+  622  git status
+  623  clear
+  624  git add all
+  625  git add "*yml"
+  626  ls
+  627  git status
+  628  git rm --cached ".yml"
+  629  git rm --cached 
+  630  git rm --cached "*.yml"
+  631  git satus
+  632  git status
+  633  cat five.yml
+  634  git add "five.yml"
+  635  git commit "apahce install and copy files"
+  636  git commit -m  "apahce install and copy files"
+  637  git config --global user.email "riteshpathak@outlook.in"
+  638  git config --global user.name "ritesh pathak"
+  639  git commit -m  "apahce install and copy files"
+  640  ls
+  641  git add "create_user.yml" "example.yml" "mkdir1.yml" "mkdir.yml" "remove_user.yml"
+  642  git commit -m "as per files name"
+  643  git remote add origin https://github.com/pathakritesh/ansible.git
+  644  git push origin master
+  645  git push origin master -f
+  646  clear
+  647  ls
+  648  vi copy.yml
+  649  ansible-playbook --check --syntax copy.yml
+  650  ansible-playbook --diff copy.yml
+  651  ansible-playbook copy.yml
+  652  vi replace.yml
+  653  ansible-playbook --check --syntax replace.yml
+  654  ansible-playbook --diff replace.yml
+  655  ansible-playbook replace.yml
+  656  git status
+  657  git add "copy.yml" "replace.yml"
+  658  git commit -m -a "as per file name"
+  659  git commit -m "as per file name"
+  660  git push origin master
+  661  vi zip.yml
+  662  ansible-playbook --check --syntax zip.yml
+  663  cat zip.yml
+  664  vi zip.yml
+  665  ansible-playbook --check --syntax zip.yml
+  666  cat zip.yml
+  667  i zip.yml
+  668  vi zip.yml
+  669  ansible-playbook --check --syntax zip.yml
+  670  vi date.yml
+  671  ansible-playbook --check --syntax date.yml
+  672  ansible-playbook --diff date.yml
+  673  ansible-playbook  date.yml
+  674  vi mkdir.yml
+  675  ansible-playbook --diff mkdir.yml
+  676  ls
+  677  vi hosts
+  678  sudo bash
+  679  vi varibale.yml
+  680  ansible-playbook --check --syntax variable.yml
+  681  ansible-playbook --check --syntax varibale.yml
+  682  ansible-playbook --diff variable.yml
+  683  ansible-playbook --diff varibale.yml
+  684  ansible-playbook varibale.yml
+  685  git commit -m -a "varibale.yml" 
+  686  ls
+  687  git add  "varibale.yml" 
+  688  git commit -m  "variable" 
+  689  cat varibale.yml
+  690  vi variable1.yml
+  691  ansible-playbook --check --syntax variable1.yml
+  692  cat variable.yml
+  693  cat variable1.yml
+  694  vi variable1.yml
+  695  ansible-playbook --check --syntax variable1.yml
+  696  ansible-variable --diff variable1.yml
+  697  ansible-playbook --diff variable1.yml
+  698  git add "variable1.yml"
+  699  vi reg_vars.yml
+  700  ansible-playbook --check --syntax reg_vars.yml
+  701  ansible-playbook --diff reg_vars.yml
+  702  cat reg_vars.yml
+  703  ansible-playbook --diff reg_vars.yml -vvv
+  704  vi reg_vars.yml
+  705  ansible-playbook --diff reg_vars.yml -vvv
+  706  vi reg_vars.yml
+  707  ansible-playbook --diff reg_vars.yml -vvv
+  708  ansible-playbook --diff reg_vars.yml 
+  709  vi install.yml
+  710  ansible-playbook --check --syntax install.yml
+  711  ansible-playbook --diff install.yml
+  712  ansible-playbook --diff install.yml -vvv
+  713  vi apache.yml
+  714  ansible-playbook --check --syntax apache.yml
+  715  cat apache.yml
+  716  vi apache.yml
+  717  ansible-playbook --check --syntax apache.yml
+  718  ansible-playbook --diff apache.yml
+  719  ansible-playbook apache.yml
+  720  vi jdk.yml
+  721  ansible-playbook --diff jdk.yml
+  722  cat jdk.yml
+  723  vi jdk1.yml
+  724  ansible-playbook --check --syntax jdk1.yml
+  725  ansible-playbook -diff jdk1.yml
+  726  ansible-playbook --diff jdk1.yml
+  727  vi maven.yml
+  728  cat maven.yml
+  729  ansible-playbook --check --syntax maven.yml
+  730  ansible-playbook --diff maven.yml
+  731  vi maven1.yml
+  732  ansible-playbook --check --syntax maven1.yml
+  733  ansible-playbook --diff maven1.yml
+  734  vi maven.yml
+  735  ansible-playbook --check --syntax maven.yml
+  736  ansible-playbook --diff maven.yml
+  737  vi tomcat.yml
+  738  ansible-playbook --diff tomcat.yml
+  739  ansible-playbook --diff tomcat.yml -vvv
+  740  vi pre.yml
+  741  ansible-playbook --check --syntax pre.yml
+  742  cat pre.yml
+  743  vi pre.yml
+  744  ansible-playbook --check --syntax pre.yml
+  745  cat pre.yml
+  746  vi pre.yml
+  747  ansible-playbook --check --syntax pre.yml
+  748  vi restart.yml
+  749  ansible-playbook --check --syntax restart.yml
+  750  cat five.yml
+  751  ansible-playbook --check --syntax five.yml
+  752  ansible -m ping all
+  753  clear
+  754  git status
+  755  git add apache.yml
+  756  #       date.yml
+  757  #       hosts
+  758  #       install.yml
+  759  #       jdk.yml
+  760  #       jdk1.yml
+  761  #       learn.txt
+  762  #       maven.yml
+  763  #       maven1.yml
+  764  #       pre.yml
+  765  #       reg_vars.yml
+  766  #       restart.yml
+  767  #       tomcat.yml
+  768  clear
+  769  git status
+  770  mkdir .gitignore
+  771  ls
+  772  cd .gitignore
+  773  vi .gitignore.txt
+  774  cd ..
+  775  pwd
+  776  clear
+  777  git status
+  778  ls
+  779  clear
+  780  history
+  781  history > 10octHistory.txt
