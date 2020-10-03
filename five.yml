@@ -1,0 +1,18 @@
+---
+- hosts: webservers
+  become: true
+  become_user: root
+  vars: 
+  src_path: /tmp
+  dest_path: /var/www/html
+  tasks:
+  - name: install apache package
+    yum: name=httpd state=present
+  - name: start the service
+    service: name=httpd state=started
+  - name: copy the configuration files
+    copy: src={{src_path}}/index.html dest={{dest_path}}
+    notify: restart apache
+  handlers:
+  - name: restart apache
+    service: name=httpd state=restarted
