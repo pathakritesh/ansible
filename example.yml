@@ -1,0 +1,10 @@
+---
+- hosts: webservers
+  become: true
+  become_user: root
+  tasks:
+  - name: ensure apache is at the latest version
+    yum:
+      name: git
+      state: latest
+
