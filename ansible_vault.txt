@@ -1,0 +1,34 @@
+#2) To encrypt an existing yml file use the following
+
+$ ansible-vault encrypt existingfile.yml
+Password will again be asked for encryption.
+
+#3) Viewing encrypted file
+
+Use the command ansible-vault view to look at the actual contents of the file.
+
+$ ansible-vault view jobagreement.yml
+You will be asked for the password again to look at the contents of the file.
+
+#4) Editing encrypted files
+
+If you need to edit the file use the command ansible-vault edit
+
+$ ansible-vault edit users.yml
+Enter the password to edit the file.
+
+#5) Changing password of the encrypted files
+
+Use the command ansible-vault rekey to change the password of the file.
+
+$ ansible-vault rekey jobagreement.yml
+#6) Run an encrypted Ansible playbook file
+
+Use the option –ask-vault-pass with the ansible-playbook command.
+
+$ ansible-playbook users.yml --ask-vault-pass
+#7) Manually decrypting the encrypted files
+
+Use the command ansible-vault decrypt command.
+
+$ ansible-vault decrypt jobagreement.yml
